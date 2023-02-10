@@ -1,19 +1,27 @@
 public class Weekday {
     public static void main(String[] args) {
-        if ("1".equals(args[0])) {
+        defineWeekDay();
+    }
+    
+    public static void defineWeekDay() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите цифу от 1 до 7 :");
+        int number = scanner.nextInt();
+        if (number == 1) {
             System.out.println("понедельник");
-        } else if ("2".equals(args[0])) {
+        } else if (number == 2) {
             System.out.println("Вторник");
-        } else if ("3".equals(args[0])) {
+        } else if (number == 3) {
             System.out.println("Среда");
-        } else if ("4".equals(args[0])) {
+        } else if (number == 4) {
             System.out.println("Четверг");
-        } else if ("5".equals(args[0])) {
+        } else if (number == 5) {
             System.out.println("Пятница");
-        } else if ("6".equals(args[0]) || "7".equals(args[0])) {
+        } else if (number == 6 || number == 7) {
             System.out.println("Выходные");
         } else {
-            System.out.println(" ");
+            System.out.println("Не подходящее число!");
+            defineWeekDay();
         }
     }
 }
